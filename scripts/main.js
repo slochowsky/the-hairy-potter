@@ -1,6 +1,5 @@
 let potteryObjId = 1
 
-
 const potteryMaker = (shape, weight, height) => {
 
     let potteryObj = {
@@ -60,8 +59,7 @@ const setPrice = (pottery) => {
 potteryToSell.forEach(pottery => {
    setPrice(pottery)
     
-});
-
+})
 
 const kiln1 = kilnRep(potteryExample, 2201)
 const kiln2 = kilnRep(potteryExample2, 100)
@@ -69,8 +67,48 @@ const kiln3 = kilnRep(potteryExample3, 222222)
 const kiln4 = kilnRep(potteryExample4, 100)
 const kiln5 = kilnRep(potteryExample5, 222201)
 const kiln6 = kilnRep(potteryExample6, 1100)
-
-
 console.log("sellable pottery", potteryToSell)
 console.log("not sellable pottery", potteryNotToSell)
 
+const usePottery = () => {
+    return potteryToSell
+}
+
+const potteryComponent = (pottery) => {
+    return `
+    <section class="singlePot">
+    <button id="sell--${pottery.id}">SELL POTTERY</button
+    <br>
+    <div id="shape">Shape: ${pottery.shape}</div>
+    <div>Weight: ${pottery.weight} lbs</div>
+    <div>Height: ${pottery.height} inches</div>
+    <div id="price">Price: $${pottery.price}</div>
+    </section>
+    `
+}
+
+const contentTarget = document.querySelector("#inventory")
+const eventHub = document.querySelector("#inventory")
+
+const potteryListComponent = () => {
+    const potteryList = usePottery()
+
+    contentTarget.innerHTML += `
+        <section>
+            ${potteryList.map(
+                    (potteryList) => {
+                        return potteryComponent(potteryList)
+                    }).join("")}
+        </section>`
+}
+potteryListComponent()
+
+
+eventHub.addEventListener("click", event => {
+    if(event.target.id.includes('sell--')) {
+        const myPottery = usePottery()
+        const id = parseInt(event.target.id.split('--')[1])
+        const pottery = myPottery.find(pottery => pottery.id === id)
+        window.alert(`A ${pottery.shape} pot was sold for $${pottery.price}`)
+    }
+}) 
