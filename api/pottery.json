@@ -1,0 +1,64 @@
+{
+  "pottery": [
+    {
+      "shape": "sphere",
+      "weight": 1,
+      "height": 3,
+      "temp": 2300,
+      "fired": true,
+      "cracked": true,
+      "price": 0,
+      "id": 5
+    },
+    {
+      "shape": "sphere",
+      "weight": 1,
+      "height": 3,
+      "temp": 2300,
+      "fired": true,
+      "cracked": true,
+      "price": 0,
+      "id": 6
+    },
+    {
+      "shape": "sphere",
+      "weight": 1,
+      "height": 3,
+      "temp": 2300,
+      "fired": true,
+      "cracked": true,
+      "price": 0,
+      "id": 7
+    },
+    {
+      "shape": "funky",
+      "weight": 6,
+      "height": 1,
+      "temp": 1800,
+      "fired": true,
+      "cracked": false,
+      "price": 0,
+      "id": 8
+    },
+    {
+      "shape": "circle",
+      "weight": 23,
+      "height": 7,
+      "temp": 22,
+      "fired": true,
+      "cracked": false,
+      "price": 0,
+      "id": 9
+    },
+    {
+      "shape": "circle",
+      "weight": 23,
+      "height": 7,
+      "temp": 22,
+      "fired": true,
+      "cracked": false,
+      "price": 0,
+      "id": 10
+    }
+  ]
+}
