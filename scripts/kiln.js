@@ -1,4 +1,4 @@
-import { getPots } from "./pottery.js"
+import { getPots } from "./potteryProvider.js"
 
 export const kiln = (pot) => {
     

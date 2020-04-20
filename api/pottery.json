@@ -58,6 +58,26 @@
       "fired": true,
       "cracked": false,
       "price": 0,
+      "id": 9
+    },
+    {
+      "shape": "circle",
+      "weight": 23,
+      "height": 7,
+      "temp": 22,
+      "fired": true,
+      "cracked": false,
+      "price": 0,
+      "id": 9
+    },
+    {
+      "shape": "circle",
+      "weight": 23,
+      "height": 7,
+      "temp": 22,
+      "fired": true,
+      "cracked": false,
+      "price": 0,
       "id": 10
     }
   ]
